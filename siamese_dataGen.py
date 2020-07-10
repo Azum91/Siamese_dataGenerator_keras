@@ -5,13 +5,6 @@ Created on Sat Jul 11 01:36:37 2020
 @author: Azum
 """
 
-
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jul  3 12:41:01 2020
-
-@author: Azum
-"""
 import numpy as np
 import matplotlib.pyplot as plt
 from skimage.transform import resize
