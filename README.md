@@ -19,7 +19,7 @@ df_neg = pd.read_csv(neg_list_path)
 
 df_neg  = df_neg.loc[:,~df_neg.columns.str.contains('^Unnamed')]
 
-# base_path for images all images
+#base_path for images all images
 images_base_path = '../training'
 
 #Generating list on object call
