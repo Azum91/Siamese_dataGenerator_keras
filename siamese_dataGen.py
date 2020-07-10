@@ -14,7 +14,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.utils import np_utils
 from keras.applications.vgg16 import preprocess_input
 
-class batch_generator_list:
+class Siamese_batch_generator:
     
     
     def __init__(self,IMAGE_DIR,hp_list,hn_list,width,height,preprocesses):
