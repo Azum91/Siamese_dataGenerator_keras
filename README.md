@@ -29,6 +29,20 @@ obj_batchgen = Siamese_batch_generator(base_path,df_pos,df_neg,224,224,preproces
 
 batch_gen = obj_batchgen.data_generator(batch_size=32)
 
-batch_check = next(batch_gen)
+batch_check , labels = next(batch_gen)
 
-print(batch_check.shape)
+print(batch_check.shape,labels.shape)
+
+
+#ploting images to see if everything till now looks good
+#%%
+#i is to iterate over the batch
+
+fig = plt.figure(figsize=(6,6))
+for i in range(1, 6*6 +1):
+    fig.add_subplot(6, 6, i)
+    plt.axis('off')
+    plt.title(np.argmax(labels[i,:]))
+    plt.imshow(mybatch[i,:,:,:],interpolation="nearest")
+
+plt.show()
